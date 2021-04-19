@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HeaderSection } from "../../HeaderSection";
 import { slidesData } from "./Data";
-import { useTransition, animated, config } from 'react-spring';
+import { useTransition, animated, config } from "react-spring";
 
 export const Home = () => {
 	const [index, setIndex] = useState(0);
-	const transitions = useTransition(slidesData[index], item => item.id, {
+	const transitions = useTransition(slidesData[index], (item) => item.id, {
 		from: { opacity: 0 },
 		enter: { opacity: 1 },
 		leave: { opacity: 0 },
-		config: config.molasses
+		config: config.molasses,
 	});
 
 	const interval = setInterval(() => {
@@ -17,7 +17,7 @@ export const Home = () => {
 	}, 5000);
 
 	const goLeft = () => {
-			clearInterval(interval);
+		clearInterval(interval);
 
 		if (index === 0) {
 			setIndex(slidesData.length - 1);
@@ -36,17 +36,16 @@ export const Home = () => {
 		}
 	};
 
-	return transitions.map(({item, props, key}) => (
-
-		<animated.div key={key} style={{...props}}>
-			<HeaderSection 
+	return transitions.map(({ item, props, key }) => (
+		<animated.div key={key} style={{ ...props }}>
+			<HeaderSection
 				title={item.title}
 				description={item.description}
 				img={item.img}
 				btnText={item.btnText}
 				goLeft={goLeft}
-				goRight={goRight} />
+				goRight={goRight}
+			/>
 		</animated.div>
 	));
-
 };

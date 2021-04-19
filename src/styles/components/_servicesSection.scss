@@ -1,0 +1,49 @@
+.service-content {
+	padding: 5rem 0;
+}
+
+.service-card {
+	margin-bottom: 40px;
+	box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+.card-text {
+	font-size: 15px;
+	color: $dark-light;
+	height: 80px;
+}
+
+.icon-position {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: 15px;
+}
+
+.centered {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+}
+
+.line {
+	width: 80px;
+	background-color: $yellow;
+	height: 3px;
+	border: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+.circle {
+	width: 70px;
+	height: 70px;
+	border-radius: 50px;
+	border: 3px solid $yellow;
+}

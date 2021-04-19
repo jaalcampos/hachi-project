@@ -32,11 +32,6 @@ export const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Acerca de
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                                 Proyectos
                             </Link>
                         </li>
