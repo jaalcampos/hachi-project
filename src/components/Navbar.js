@@ -1,48 +1,104 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link, animateScroll as scroll} from "react-scroll";
 
 export const Navbar = () => {
+	const [click, setClick] = useState(false);
 
-    const [click, setClick] = useState(false);
+	const handleClick = () => setClick(!click);
 
-    const handleClick = () => setClick(!click);
+	const closeMobileMenu = () => setClick(false);
 
-    const closeMobileMenu = () => setClick(false);
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    }
 
-    return (
-        <>
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
-                        HACHI
-                    </Link>
-                    <div className="menu-icon" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'} >
+	return (
+		<>
+			<nav className="navbar">
+				<div className="navbar-container">
+					<Link onClick={scrollToTop} className="navbar-logo">
+						HACHI
+					</Link>
+					<div className="menu-icon" onClick={handleClick}>
+						<i className={click ? "fas fa-times" : "fas fa-bars"} />
+					</div>
+					<ul className={click ? "nav-menu active" : "nav-menu"}>
+						<li className="nav-item">
+							<Link
+								smooth={true}
+                                offset={-10}
+								duration={500}
+								delay={100}
+								activeClass="active"
+								className="nav-links"
+								onClick={closeMobileMenu}
+							>
+								Inicio
+							</Link>
+						</li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Inicio
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Servicios
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Proyectos
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Contacto
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </>
-    )
-}
+							<Link
+								to="about-section"
+								smooth={true}
+                                offset={-10}
+								duration={2000}
+								delay={100}
+								activeClass="active"
+								activeClass="active"
+								className="nav-links"
+								onClick={closeMobileMenu}
+							>
+								Nosotros
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								to="service-section"
+								smooth={true}
+                                offset={-10}
+								duration={2000}
+								delay={100}
+								activeClass="active"
+								activeClass="active"
+								className="nav-links"
+								onClick={closeMobileMenu}
+							>
+								Servicios
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								to="project-section"
+								smooth={true}
+                                offset={-10}
+								duration={2000}
+								delay={100}
+								activeClass="active"
+								activeClass="active"
+								className="nav-links"
+								onClick={closeMobileMenu}
+							>
+								Proyectos
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								to="contact-section"
+								smooth={true}
+								offset={-10}
+								duration={2000}
+								delay={100}
+								activeClass="active"
+								activeClass="active"
+								className="nav-links"
+								onClick={closeMobileMenu}
+							>
+								Contacto
+							</Link>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</>
+	);
+};

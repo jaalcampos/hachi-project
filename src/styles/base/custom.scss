@@ -1,0 +1,16 @@
+/* make the customizations */
+$theme-colors: (
+    "primary": $yellow,
+);
+
+.form-control:focus {
+    border-color: $yellow !important;
+    box-shadow: 0 0 5px rgba(240, 202, 5, 1) !important;
+  }
+
+.modal-90w{
+  width: 90%;
+  max-width: 90% !important;
+}
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";

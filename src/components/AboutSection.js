@@ -7,7 +7,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export const AboutSection = () => {
 	return (
-		<div className="about-content">
+		<div className="about-content" name="about-section">
 			<Container>
 				<Row>
 					<Col md={6}>
@@ -30,7 +30,7 @@ export const AboutSection = () => {
 				</Row>
 				<Row className="p-5">
 					<Col xs={12} sm={12} md={12}>
-						<h3 className="text-center mt-5 mb-5">¿Qué hacemos?</h3>
+						<h3 className="text-center mb-5">¿Qué hacemos?</h3>
 					</Col>
 					<Col xs={12} sm={12} md={6}>
 						<img src={hachi2} className="img-fit" />

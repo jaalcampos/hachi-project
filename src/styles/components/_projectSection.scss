@@ -1,0 +1,32 @@
+.project-section {
+	padding: 5rem 0;
+}
+
+.card-galery {
+	width: 100%;
+	box-shadow: 1px 1px 14px #ccc;
+    margin-bottom: 2rem;
+}
+
+.card-galery .card-img > img {
+	width: 100%;
+	height: auto;
+    transition: all 0.3s;
+}
+
+.card-galery .zoom {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-galery .zoom :hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-galery .card-content {
+	padding: 1rem;
+}
+

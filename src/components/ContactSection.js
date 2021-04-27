@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Container, Form, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faClock, faMapMarkedAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const ContactSection = () => {
+	const [values, setValues] = useState({ name: "", email: "", message: "" });
+
+	const handleInputChange = ({ target }) => {
+		setValues({
+			...values,
+			[target.name]: target.value,
+		});
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(values);
+	};
+
 	return (
-		<div className="contact-content">
+		<div className="contact-content" name="contact-section">
 			<Container>
 				<h3>CONTACTO</h3>
 				<hr className="line" />
@@ -13,35 +27,47 @@ export const ContactSection = () => {
 					<Col xs={12} md={6}>
 						<Row>
 							<Col md={{ span: 8, offset: 2 }}>
-								<Form>
+								<Form onSubmit={handleSubmit}>
 									<Form.Group>
 										<Form.Row>
-											<Form.Label>Nombre</Form.Label>
+											<Form.Label className="subtitle-black">Nombre</Form.Label>
 											<Form.Control
 												required
 												type="text"
 												placeholder="Nombre"
+												name="name"
+												value={values.name}
+												onChange={handleInputChange}
 											/>
 										</Form.Row>
 									</Form.Group>
 									<Form.Group>
 										<Form.Row>
-											<Form.Label>Email</Form.Label>
+											<Form.Label className="subtitle-black">Email</Form.Label>
 											<Form.Control
 												required
 												type="text"
 												placeholder="Email"
+												name="email"
+												value={values.email}
+												onChange={handleInputChange}
 											/>
 										</Form.Row>
 									</Form.Group>
 									<Form.Group controlId="exampleForm.ControlTextarea1">
 										<Form.Row>
-											<Form.Label>Mensaje</Form.Label>
-											<Form.Control as="textarea" rows={3} />
+											<Form.Label className="subtitle-black">Mensaje</Form.Label>
+											<Form.Control
+												as="textarea"
+												rows={3}
+												name="message"
+												value={values.message}
+												onChange={handleInputChange}
+											/>
 										</Form.Row>
 									</Form.Group>
 									<Form.Row>
-										<Button variant="outline-warning" type="submit" block>
+										<Button variant="outline-primary" type="submit" block>
 											Enviar Mensaje
 										</Button>
 									</Form.Row>

@@ -2,12 +2,13 @@
 
 @import "./base/theme_colors.scss";
 @import "./base/base.scss";
-    
+@import "./base/custom.scss";
+
 //components
 @import "./components/navbar";
-@import "./components/headerSection";
 @import "./components/header";
 @import "./components/aboutSection";
 @import "./components/servicesSection";
+@import "./components/projectSection";
 @import "./components/contactSection";
 @import "./components/footerSection";
