@@ -7,6 +7,7 @@ import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import { ProjectSection } from "./components/ProjectSection";
 import { ServicesSection } from "./components/ServicesSection";
+import { ParalaxComponent } from "./components/ParalaxComponent";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Header />
 			</header>
 			<AboutSection />
+			<ParalaxComponent/>
 			<ServicesSection />
 			<ProjectSection />
 			<ContactSection />
