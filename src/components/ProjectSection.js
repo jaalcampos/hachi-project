@@ -15,10 +15,10 @@ export const ProjectSection = () => {
 				<hr className="line" />
 				<Row>
 					{projectData.map((project) => (
-						<Col md={4} sm={12} xs={12}>
+						<Col md={4} sm={12} xs={12} key={project.title}>
 							<div className="card-galery">
 								<div className="card-img zoom">
-									<img src={project.img} />
+									<img src={project.img} alt={project.title}/>
 								</div>
 								<div className="card-content">
 									<Row>

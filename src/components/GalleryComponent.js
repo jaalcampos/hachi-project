@@ -12,11 +12,6 @@ export const GalleryComponent = ({ show, handleClose }) => {
 			dialogClassName="modal-90w"
 			aria-labelledby="example-custom-modal-styling-title"
 		>
-			<Modal.Header closeButton>
-				<Modal.Title id="example-custom-modal-styling-title">
-					Custom Modal Styling
-				</Modal.Title>
-			</Modal.Header>
 			<Modal.Body>
 				<Carousel fade indicators={false}>
 					<Carousel.Item>

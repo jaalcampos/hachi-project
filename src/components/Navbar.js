@@ -16,7 +16,7 @@ export const Navbar = () => {
 		<>
 			<nav className="navbar">
 				<div className="navbar-container">
-					<Link onClick={scrollToTop} className="navbar-logo">
+					<Link onClick={scrollToTop} className="navbar-logo" to="inicio-section">
 						HACHI
 					</Link>
 					<div className="menu-icon" onClick={handleClick}>
@@ -25,11 +25,13 @@ export const Navbar = () => {
 					<ul className={click ? "nav-menu active" : "nav-menu"}>
 						<li className="nav-item">
 							<Link
+								to="inicio-section"
 								smooth={true}
+								spy={true}
                                 offset={-10}
 								duration={500}
 								delay={100}
-								activeClass="active"
+								activeClass="active-li"
 								className="nav-links"
 								onClick={closeMobileMenu}
 							>
@@ -40,11 +42,11 @@ export const Navbar = () => {
 							<Link
 								to="about-section"
 								smooth={true}
+								spy={true}
                                 offset={-10}
 								duration={2000}
 								delay={100}
-								activeClass="active"
-								activeClass="active"
+								activeClass="active-li"
 								className="nav-links"
 								onClick={closeMobileMenu}
 							>
@@ -55,11 +57,11 @@ export const Navbar = () => {
 							<Link
 								to="service-section"
 								smooth={true}
+								spy={true}
                                 offset={-10}
 								duration={2000}
 								delay={100}
-								activeClass="active"
-								activeClass="active"
+								activeClass="active-li"
 								className="nav-links"
 								onClick={closeMobileMenu}
 							>
@@ -70,11 +72,11 @@ export const Navbar = () => {
 							<Link
 								to="project-section"
 								smooth={true}
+								spy={true}
                                 offset={-10}
 								duration={2000}
 								delay={100}
-								activeClass="active"
-								activeClass="active"
+								activeClass="active-li"
 								className="nav-links"
 								onClick={closeMobileMenu}
 							>
@@ -85,11 +87,11 @@ export const Navbar = () => {
 							<Link
 								to="contact-section"
 								smooth={true}
+								spy={true}
 								offset={-10}
 								duration={2000}
 								delay={100}
-								activeClass="active"
-								activeClass="active"
+								activeClass="active-li"
 								className="nav-links"
 								onClick={closeMobileMenu}
 							>

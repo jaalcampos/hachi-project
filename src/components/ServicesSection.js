@@ -11,7 +11,7 @@ export const ServicesSection = () => {
 				<hr className="line" />
 				<Row>
 					{serviceData.map(({ title, description, icon }) => (
-						<Col md={4} sm={12}>
+						<Col md={4} sm={12} key={title}>
 							<Card border="light" className="service-card">
 								<Card.Header>
 									<Card.Title className="subtitle-black">{title}</Card.Title>

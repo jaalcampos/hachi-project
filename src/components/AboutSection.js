@@ -17,7 +17,7 @@ export const AboutSection = () => {
 								<hr className="line-about" />
 							</Col>
 							<Col md={12}>
-								<img src={hachiLogo} className="img-fluid" />
+								<img src={hachiLogo} alt="Hachi Logo" className="img-fluid" />
 							</Col>
 						</Row>
 					</Col>
@@ -33,7 +33,7 @@ export const AboutSection = () => {
 						<h3 className="text-center mb-5">¿Qué hacemos?</h3>
 					</Col>
 					<Col xs={12} sm={12} md={6}>
-						<img src={hachi2} className="img-fit" />
+						<img src={hachi2} alt="Hachi Residencial" className="img-fit" />
 					</Col>
 					<Col xs={12} sm={12} md={6}>
 						<h4 className="subtitle mt-5">Residencial</h4>
@@ -55,10 +55,10 @@ export const AboutSection = () => {
 						</p>
 					</Col>
 					<Col xs={12} sm={12} md={6}>
-						<img src={hachi3} className="img-fit" />
+						<img src={hachi3} alt="Hachi Comercial" className="img-fit" />
 					</Col>
 					<Col xs={12} sm={12} md={6}>
-						<img src={hachi1} className="img-fit" />
+						<img src={hachi1} alt="Hachi Oficina" className="img-fit" />
 					</Col>
 					<Col xs={12} sm={12} md={6}>
 						<h4 className="subtitle mt-5">Oficina</h4>
